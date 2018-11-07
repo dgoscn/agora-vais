@@ -1,0 +1,36 @@
+languageCode = "en-us"
+title = "Diego Go"
+theme = "aerial"
+
+[params]
+  name = "Diego Amaral"
+  about = "Netsuite Developer &nbsp;&bull;&nbsp; Lifelong Learner &nbsp;&bull;&nbsp; Music Lover &nbsp;&bull;&nbsp; I never saw you here ;)"
+  copyright = "diegoamaral"
+  #Disable the scrolling background by entering any string for bg_scroll. Enable by leaving bg_scroll empty.
+  bg_scroll = ""
+  favicon = "favicon.ico"
+
+[[params.social]]
+  medium = "Facebook"
+  icon = "facebook"
+  link = "https://www.facebook.com/diego.liard3"
+
+[[params.social]]
+  medium = "Github"
+  icon = "github"
+  link = "https://github.com/dgoscn"
+
+[[params.social]]
+  medium = "Instagram"
+  icon = "instagram"
+  link = "https://www.instagram.com/dje6o/"
+
+[[params.social]]
+  medium = "Twitter"
+  icon = "twitter"
+  link = "https://twitter.com/dgoscn"
+
+[[params.social]]
+  medium = "LinkedIn"
+  icon = "linkedin"
+  link = "https://www.linkedin.com/in/amaraldude/"
