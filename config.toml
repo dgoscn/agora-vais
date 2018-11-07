@@ -1,7 +1,7 @@
 languageCode = "en-us"
 title = "Diego Go"
 theme = "aerial"
-
+publishDir = "docs"
 [params]
   name = "Diego Amaral"
   about = "Netsuite Developer &nbsp;&bull;&nbsp; Lifelong Learner &nbsp;&bull;&nbsp; Music Lover &nbsp;&bull;&nbsp; I never saw you here ;)"
