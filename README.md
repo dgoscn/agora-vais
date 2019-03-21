@@ -50,16 +50,18 @@ Então no middleware da aplicação, temos o seguinte cenário. Os requests acon
 Uma vez que entendemos o funcionamento macro da nossa aplicação, podemos seguir com a configuração do ambiente para execução do projeto em máquina local.
 
 ````
-Preencher por último
+É necessário o uso do npm e mongodb para execução do projeto
 ````
 
 ```
-Falar sobre o mongoose
+Comandos
 ```
 
+
 ```
-Falar sobre o Robo 3T
+Comandos
 ```
+
 
 ## Testes
 Para base de testes, como estamos lidando com uma **API** diretamente e o uso de um Front End para acesso aos dados é apenas perfumaria, usaremos a ferramenta **Postman**. Com ela, podemos utilizar os respectivos requests para a **API** usando os métodos **REST**
@@ -153,9 +155,10 @@ Por fim, temos por fim a execução de todos os métodos dentro da **API**.
 
 ## Conclusão
 
-O teste do projeto GIS desenvolvidor por mim, teve por sua vez, a intenção de criar algo mais próximo do que exigido, ainda que por caminhos diferentes do solicitado. Como por exemplo, o uso do banco MongoDB. A não criação também do Frete e Empresa. Não por falta de tentativa, mas por conta de tempo, acabei por preferir modelar um sistema entregável e que atende ao mínimo do que é preciso que funcione e uma pessoa possa usar no seu dia a dia.
+O teste do projeto GIS desenvolvidor por mim, teve por sua vez, a intenção de criar algo mais próximo do que exigido, ainda que por caminhos diferentes do solicitado, como por exemplo, o uso do banco MongoDB. 
+A não criação também do Frete e Empresa é um exemplo, não por falta de tentativa, mas por conta de tempo, acabei por preferir modelar um sistema entregável e que atende ao mínimo do que é preciso que funcione e uma pessoa possa usar no seu dia a dia.
 
-*Obst Alguns problemas técnicosc na parte do front em comunicação com o frente, estão em deseolvivmento. Possa ser que ao receberem o zip, a comunicação já esteja funcionando corretamente.*
+*Obs Alguns problemas técnicosc na parte do front em comunicação com o node.js, estão em deseolvivmento. Possa ser que ao receberem o zip, a comunicação já esteja funcionando corretamente.*
 
  Estarei disponível para qualquer dúvida!
 
