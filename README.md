@@ -133,7 +133,7 @@ Abaixo vemo a estrutra exibda pelo **Robo 3T** onde temos o **_id** que procuram
 
 ![belchior](https://user-images.githubusercontent.com/8397519/54782258-346eda80-4bfd-11e9-857f-c1e8d9d1d347.PNG)
 
-Vá novamente ao Robo 3T e clique no símbolo de play :arrow_forward:, isso fará com que o banco seja atualizado.
+Vá novamente ao Robo 3T e clique no símbolo de play :arrow_forward: isso fará com que o banco seja atualizado.
 
 ![belchiorbg](https://user-images.githubusercontent.com/8397519/54782603-0e960580-4bfe-11e9-8f93-de520bf2b992.PNG)
 
@@ -141,4 +141,19 @@ Com isso, podemos conferir e checar a alteração do objeto.
 
 ### USANDO O MÉTODO DELETE
 
+O método **delete** tem em sua estrutura de código praticamente o mesmo conceito do **put** necessitando de um identificador para manipula-lo.
+
+![delete](https://user-images.githubusercontent.com/8397519/54782994-05596880-4bff-11e9-9a54-0a398460021a.PNG)
+
+Vemos o mesmo aspecto, apenas mudando a chamada do método na aba do **Postman**. Vemos o resultado de um requisição **OK** por parte do **Postman**. Agora podemos conferir no **Robo 3T**
+
+![deleted](https://user-images.githubusercontent.com/8397519/54783175-726cfe00-4bff-11e9-95b4-a694bacf6510.PNG)
+
+Por fim, temos por fim a execução de todos os métodos dentro da **API**.
+
+## Conclusão
+
+##Agradecimentos
+
+Agradecimento a toda equipe CargoX envolvida nos testes; em especial, a Gabriela Rossi! Todos foram de suma importância.
 
