@@ -133,6 +133,12 @@ Abaixo vemo a estrutra exibda pelo **Robo 3T** onde temos o **_id** que procuram
 
 ![belchior](https://user-images.githubusercontent.com/8397519/54782258-346eda80-4bfd-11e9-857f-c1e8d9d1d347.PNG)
 
+Vá novamente ao Robo 3T e clique no símbolo de play :arrow_forward:, isso fará com que o banco seja atualizado.
+
+![belchiorbg](https://user-images.githubusercontent.com/8397519/54782603-0e960580-4bfe-11e9-8f93-de520bf2b992.PNG)
+
+Com isso, podemos conferir e checar a alteração do objeto.
 
 ### USANDO O MÉTODO DELETE
+
 
