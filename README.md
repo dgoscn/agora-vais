@@ -129,7 +129,10 @@ Abaixo vemo a estrutra exibda pelo **Robo 3T** onde temos o **_id** que procuram
 
 ![robo3t2](https://user-images.githubusercontent.com/8397519/54780347-400bd280-4bf8-11e9-8303-67e33667a506.PNG)
 
-2. 
+2. Via Postman alterando o **name** da Collection
+
+![belchior](https://user-images.githubusercontent.com/8397519/54782258-346eda80-4bfd-11e9-857f-c1e8d9d1d347.PNG)
+
 
 ### USANDO O MÉTODO DELETE
 
