@@ -1,67 +1,135 @@
-# Aerial
+# CARGOX GIS API TEST
 
-Aerial is a single page, single screen responsive site template. It is a port of [HTML5 UP's Aerial theme](https://html5up.net/aerial).
+A aplicação da qual o atual projeto se destina, é baseada no projeto GIS. Nela, foram abstraídas algumas funcionalidades, como por exemplo o uso de Frete e Empresas. Contudo, o foco se deu no uso das ferramentas exigidas no teste. É possível visualizar com um Front End a busca pelos caminhoneiros mais próximos a seu dispor baseado em sua geolocalização, usando latitude e longitude.
 
-![Aerial Theme screenshot](https://raw.githubusercontent.com/sethmacleod/aerial/master/images/screenshot.png)
+### Aplicação Final
+![frontpage](https://user-images.githubusercontent.com/8397519/54754881-5ba8b600-4bc3-11e9-8082-fffa88b2adf4.PNG)
 
-## Installation
+*Como exibido acima, nós podemos digitar a latitude e longitude que serão mostrados os caminhoneiros ninjas mais próximos*
 
-Run the following commands inside the folder of your Hugo site:
+Na descrição do projeto raiz, é indicado o uso do banco PostgreSQL por conta das ferramentas de geolocalização já disponibilizadas para facilitar a vida.Sendo que, no projeto atual foi utilizadoo banco de dados NoSQL MongoDB. O fato do seu uso se deu por algumas tentativas no uso com o PostgreSQL e algumas falhas técnicas que me permitiram migrar para o Mongo e também pelo limitação do tempo.
 
-	$ cd themes
-	$ git clone https://github.com/sethmacleod/aerial.git
+## Iniciando
 
-## Getting Started
+A estrutura do projeto tem as seguintes características:
 
-After installation, you only need to configure the config.toml file and, if desired, change the background picture.
+![sampleproject](https://user-images.githubusercontent.com/8397519/54755777-7a0fb100-4bc5-11e9-844d-611bb090b9ab.png)
 
-### The config file
+Temos o **MongoDB** como banco de dados, o **Node.js** como provisão da API e o **Express**, do qual nos ajuda nas requisições, manipulações e conexões dos estados.
 
-Copy the config.toml file from the exampleSite folder into your root folder of your Hugo site. Change the fields as needed. Be sure to change the baseurl. Add or delete social media as needed. You may need to look up the [font-awesome](http://fontawesome.io/) icon names. The icon field should be filled out without the "fa" prefix. The icon field for Twitter should be `twitter` instead of `fa-twitter`.
+![comunicacao](https://user-images.githubusercontent.com/8397519/54755955-f0acae80-4bc5-11e9-83c9-eb50c2ad10f1.png)
 
-### Change the background
+Acima, temos o comportamento dos dados dentro do nosso cenário.
 
-Should you choose to change the background, create a `/static/css/images` folder and add a picture named `bg.jpg`. For the best results, follow these instructions:
+A caracterísica do **Mongo** de modelagem pode ser descrita resumidamente:
 
-The Scrolling Background:
+**Models**
 
-    This relies entirely on CSS to do its thing, which is cool, but that makes
-    changing it a bit weird/tricky at first. You can still use pretty much any image
-    you want, but for best results make sure yours is:
+- Models são representados por **collections** no **MongoDB**, o que pode ser similar ao **TableSQL**
 
-    - Horizontally tileable.
-    - Wide and short.
-    - About 1500px wide.
-    - Fades to a solid color either at the top of bottom (which is used to fill
-      the empty space above or below your image).
+- User model representa uma **collection** de Users
 
-    Now, there are two ways to use it: with CSS, or with Sass:
+- Shipping Model para representar uma **collection** de Transportadoras
 
-    CSS:
+Abaixo, podemos visualizar melhor como seria representado no plano:
 
-        Look for this line in css/style.css (line 108 as of this writing):
+![objectcollection](https://user-images.githubusercontent.com/8397519/54756449-040c4980-4bc7-11e9-943b-54a36e35029f.png)
 
-            background: #348cb2 url("images/bg.jpg") bottom left;
+Então vemos uma variedade de trucker(s) com **objectIds** setados automaticamente pelo **MongoDB**. Isso nada mais é do que um identificador único, gerado automaticamente pelo banco.
 
-        and use it to set the page background color, URL, and placement of
-        your image. It should be as close to 1500px wide as you can get it.
+Dado isso, temos a representação desses objetos no formato json que por sua vez tem sua característica dentro do banco sendo utilizado o **Schema** que por sua vez, nada mais é do que a definição da estrutura dos nossos objetos de daods.
 
-    Sass:
+Finalizando a parte de estruturação do projeto, podemos entender como a comunicação acontece e quais possíveis retornos.
 
-        Set the value of $bg to the page background color, URL, and placement
-        of your image. Change $bg-width if your image is something other than
-        1500px wide.
+![middleware](https://user-images.githubusercontent.com/8397519/54757015-20f54c80-4bc8-11e9-90d8-0560e6f91e92.png)
 
-### Add custom js snippets
+Então no middleware da aplicação, temos o seguinte cenário. Os requests acontecem, a propriedade do body-parser nos permite ler e utilizar os dados dentro do formato json, como temos o cenário de rotas para as URLs e também a Handling de erros.
 
-Should you choose to add custom js snippet, create a `layouts/partials` folder with `js.html` file and put your js code in this file.
+## Setup do Projeto
 
-This can be useful for adding [Google Analytics](https://gohugo.io/extras/analytics/). Just add `{{ template "_internal/google_analytics.html" . }}` to the file and configure the config file with your `googleAnalytics` tracking id.
+Uma vez que entendemos o funcionamento macro da nossa aplicação, podemos seguir com a configuração do ambiente para execução do projeto em máquina local.
 
-## Customize favicon.ico
+````
+Preencher por último
+````
 
-You can customize a `favicon.ico` by adding it to `static` folder.
+```
+Falar sobre o mongoose
+```
 
-## License
+```
+Falar sobre o Robo 3T
+```
 
-This theme is released under the CC BY 3.0 license. For more information, read the [License](https://github.com/sethmacleod/aerial/blob/master/LICENSE.md).
+## Testes
+Para base de testes, como estamos lidando com uma **API** diretamente e o uso de um Front End para acesso aos dados é apenas perfumaria, usaremos a ferramenta **Postman**. Com ela, podemos utilizar os respectivos requests para a **API** usando os métodos **REST**
+
+
+### USANDO O MÉTODO POST
+
+Uma vez que temos o sistema sendo executado localmente, podemos manipular nossa **API** começando com o método **POST**, pois uma vez que ele é executado, podemos localizar os **Caminas Ninjas** vulgo *caminhoneiros*, pois os caminhoneiros da nossa plataforma são verdadeiros ninjas.
+
+Para isso, dentro do **Postman** iremos preencher nossos objetos já setados dentro do banco de dados e demonstrados no nosso **Schema**
+
+*Exemplo 1*
+``` 
+      {
+        
+        "name": "Rita Lee",
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                -46.576194763183594,
+                -23.510005940931347
+            ]
+       }
+```
+
+*Exemplo 2*
+
+Agora dentro do Postman
+
+![post1](https://user-images.githubusercontent.com/8397519/54774156-d71d5e00-4be9-11e9-9dfb-02bf02d8479f.PNG)
+
+Temos a formatação esperada dentro do sistema para o envio dos dados para a **API**.
+
+E por conseguinte, temos o response de criação do item!
+
+![post2](https://user-images.githubusercontent.com/8397519/54774271-177cdc00-4bea-11e9-8cfd-d20f1ab386c3.PNG)
+
+### USANDO O MÉTODO GET
+
+Como temos o sistema rodando e o banco já preenchido com os **Caminas Ninjas**, *poderemos* usar o **GET**. Como nossa arquitetura está voltada para responder com as características de **latitude** e **longitude**, a nossa **URL** acaba sendo um pouco especial, mas nada que complique nossa vida, pelo contrário, acaba facilitando.
+Por exemplo, com a rota a seguir, é possível obter o Caminhoneiro Ninja da aplicação.
+
+*Exemplo 1*
+
+````
+localhost:4000/gis/shippings/?lng=--46.576194763183594&lat=-23.510005940931347
+````
+
+![getresponse](https://user-images.githubusercontent.com/8397519/54773112-a3413900-4be7-11e9-87f1-6f027e732e58.PNG)
+
+Como podemos observar no Postman, temos um resultado de chamado **200 OK** mostrando que realmente o nosso objeto está presente na solitação.
+
+### USANDO O MÉTODO PUT
+O método **put** para entrar em funcionamento, é necessário passar um **ID**, esse **ID** representa o **Objeto** dentro do Banco, garantindo que realmente ele responde por aquela identificação. O exemplo abaixo mostra como podemos obtê-lo.
+
+#### Temos duas maneiras de poder verificar o *_id*
+
+1. Robo 3T - é uma ferramenta gratuita para se trabalhar com o MongoDB de forma gráfica.
+
+Uma vez conectado no Banco, podemos seguir os passos a seguir:
+
+![robo3t](https://user-images.githubusercontent.com/8397519/54780339-3bdfb500-4bf8-11e9-8ec3-2137a3334eef.PNG)
+
+Ao abrir o Robot 3T e nos conectarmos com o banco, temos a estrutura exibida acima, onde podemos ver o nosso Model criado; isso é feito pelo uso do **Mongoose**, a interface de omunicação entre o **Nodejs** e o **MongoDB**. Com ele, via funções pre-definidas dentro do código, podemos utilizá-las e agilizar o processo de desenvolvimento.
+
+Abaixo vemo a estrutra exibda pelo **Robo 3T** onde temos o **_id** que procuramos:
+
+![robo3t2](https://user-images.githubusercontent.com/8397519/54780347-400bd280-4bf8-11e9-8303-67e33667a506.PNG)
+
+2. 
+
+### USANDO O MÉTODO DELETE
+
