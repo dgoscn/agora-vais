@@ -1,6 +1,6 @@
 # CARGOX GIS API TEST
 
-A aplicação da qual o atual projeto se destina, é baseada no projeto GIS. Nela, foram abstraídas algumas funcionalidades, como por exemplo o uso de Frete e Empresas. Contudo, o foco se deu no uso das ferramentas exigidas no teste. É possível visualizar com um Front End a busca pelos caminhoneiros mais próximos a seu dispor baseado em sua geolocalização, usando latitude e longitude.
+A aplicação da qual o atual projeto se destina, é baseada no projeto GIS. Nela, foram abstraídas algumas funcionalidades, como por exemplo o uso de Frete e Empresas. Contudo, o foco se deu no uso das ferramentas exigidas no teste. É possível visualizar com um Front End a busca pelos caminhoneiros mais próximos a seu dispor baseado em sua geolocalização, usando latitude e longitude, sendo mostrado a distância em **KM**.
 
 ### Aplicação Final
 ![frontpage](https://user-images.githubusercontent.com/8397519/54754881-5ba8b600-4bc3-11e9-8082-fffa88b2adf4.PNG)
@@ -152,6 +152,12 @@ Vemos o mesmo aspecto, apenas mudando a chamada do método na aba do **Postman**
 Por fim, temos por fim a execução de todos os métodos dentro da **API**.
 
 ## Conclusão
+
+O teste do projeto GIS desenvolvidor por mim, teve por sua vez, a intenção de criar algo mais próximo do que exigido, ainda que por caminhos diferentes do solicitado. Como por exemplo, o uso do banco MongoDB. A não criação também do Frete e Empresa. Não por falta de tentativa, mas por conta de tempo, acabei por preferir modelar um sistema entregável e que atende ao mínimo do que é preciso que funcione e uma pessoa possa usar no seu dia a dia.
+
+*Obst Alguns problemas técnicosc na parte do front em comunicação com o frente, estão em deseolvivmento. Possa ser que ao receberem o zip, a comunicação já esteja funcionando corretamente.*
+
+ Estarei disponível para qualquer dúvida!
 
 ## Agradecimentos
 
